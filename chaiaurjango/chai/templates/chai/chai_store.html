@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="bg-amber-800 w-120 m-auto p-10 mt-20 text-white ">
+<form class="text-2xl font-bold" method='POST'>
+  {% csrf_token %}
+  {{form.as_p}}
+  {{forms}}
+  <button class="text-xl bg-white text-black p-2 w-[100%] rounded mt-5 mb-5 hover:bg-gray-400 hover:cursor-pointer font-bold" type="submit"> Search store </button>
+</form>
+
+{% if Stores %}
+    
+    <ul class="text-white font-bold capitalize text-center">
+      {% for store in Stores %}
+        <li>Store: {{store.name}} - {{store.location}} </li>
+        
+      {% endfor %}
+    </ul>
+  
+  {% else %} <h1>available soon</h1>
+
+{% endif %}
+
+
+</div>
+
+{% endblock %}

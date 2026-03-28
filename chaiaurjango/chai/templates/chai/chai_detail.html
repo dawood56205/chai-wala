@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title  %} {% endblock %}
+{% block content %}
+
+
+ <h1 class = "text-4xl font-bold text-center text-black mt-20 mb-20 p-10 bg-yellow-400 font-['Abhaya_Libre']">CHAI DETAIL PAGE</h1> 
+ <div class="bg-amber-800">
+ <div class="flex text-white p-5 justify-around pt-10 pb-10  m-5 rounded-3xl w-225 m-auto">
+  <div>
+  <img class="rounded-2xl h-100 w-75 " src="{{chai.image.url}}" alt="">
+  </div>
+  <div class="w-130 bg-amber-900 p-8 rounded-2xl">
+  <h2 class = "text-4xl text-center font-extrabold mt-2 capitalize">{{chai.name}}</h2>
+  <h2 class = "text- text-white   m-5 ml-0"> <strong>Description: </strong> {{ chai.descriptions }}</h2>
+  
+  <h2><b>Available at: </b> {{Stores.name}} - {{Stores.location}} </h2>
+  
+  <p class=" text-gray-200 text-xl font-bold">Price: {{chai.price}}$</p>
+  </div>
+ </div>
+</div>
+
+
+
+ 
+{% endblock %}
