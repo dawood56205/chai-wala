@@ -14,6 +14,7 @@ def chai_detail(request, chai_id):
   return render(request, 'chai/chai_detail.html', {'chai': chai, 'Stores': Stores})
 
 def chai_store(request):
+  chai = CHAIVARIETY.objects.all()
   Stores = None
   if request.method == 'POST':
     forms = chaivarietyform(request.POST)
@@ -23,7 +24,7 @@ def chai_store(request):
   else:
     forms = chaivarietyform()
 
-  return render(request, 'chai/chai_store.html', {'Stores' : Stores, 'forms': forms})
+  return render(request, 'chai/chai_store.html', {'Stores' : Stores, 'forms': forms, 'chai':chai})
 # def order_chai(request) :
 #   return render(request, 'chai/indexorder.html')
 
