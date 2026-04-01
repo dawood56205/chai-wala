@@ -25,6 +25,9 @@ def chai_store(request):
     forms = chaivarietyform()
 
   return render(request, 'chai/chai_store.html', {'Stores' : Stores, 'forms': forms, 'chai':chai})
+
+def contact_us(request):
+  return render(request, 'chai/contact_us.html')
 # def order_chai(request) :
 #   return render(request, 'chai/indexorder.html')
 

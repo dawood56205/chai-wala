@@ -6,7 +6,8 @@ urlpatterns = [
     
     path('', views.all_chai, name='all_chai'),
     path('<int:chai_id>/', views.chai_detail, name='chai_detail'),
-    path('chai_store/', views.chai_store, name='chai_store')
+    path('chai_store/', views.chai_store, name='chai_store'),
+    path('contact_us/', views.contact_us, name = 'contact_us')
     # path('order/', views.order_chai, name='orderchai'),
     # path('latte/', views.lattechoices, name='lattechoices'),
     
